@@ -1,0 +1,27 @@
+<mxfile host="app.diagrams.net" modified="2023-09-21T23:55:44.303Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="det5eb7TF4p3wZVVWNiM" version="21.7.5" type="device">
+  <diagram name="Página-1" id="_3eJf4W7CDF3ELf99p4b">
+    <mxGraphModel dx="1434" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wpd07_N04kJZDVQ40TJI-1" value="Tareas" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="190.5" width="160" height="179" as="geometry" />
+        </mxCell>
+        <mxCell id="wpd07_N04kJZDVQ40TJI-2" value="&lt;b&gt;&lt;u&gt;IDTarea (PK)&lt;br&gt;IDUsuario_T(FK)&lt;/u&gt;&lt;/b&gt;&lt;br&gt;Nombre_T&lt;br&gt;Descripción_T&lt;br&gt;FechaDeTarea_T&lt;br&gt;HoraDeTarea_T&lt;br&gt;FechaDeCarga_T&lt;br&gt;Activa_T" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="wpd07_N04kJZDVQ40TJI-1">
+          <mxGeometry y="50" width="160" height="129" as="geometry" />
+        </mxCell>
+        <mxCell id="wpd07_N04kJZDVQ40TJI-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERzeroToMany;endFill=0;endSize=10;startSize=10;startArrow=ERmandOne;startFill=0;" edge="1" parent="1" source="wpd07_N04kJZDVQ40TJI-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wpd07_N04kJZDVQ40TJI-3" value="Usuarios" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="200" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="wpd07_N04kJZDVQ40TJI-4" value="&lt;b&gt;&lt;u&gt;IDUsuario_U(PK)&lt;br&gt;&lt;/u&gt;&lt;/b&gt;Nombre_U&lt;br&gt;Email_U&lt;br&gt;Clave_U&lt;br&gt;Activo_U&lt;br&gt;FechaDeCarga_U" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="wpd07_N04kJZDVQ40TJI-3">
+          <mxGeometry y="50" width="160" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
