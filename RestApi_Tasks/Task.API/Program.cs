@@ -10,9 +10,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// database config
 builder.Services.AddDbContext<DbtaskContext>(option => { 
     option.UseSqlServer(builder.Configuration.GetConnectionString("SQLString"));
 });
+
+// automapper config
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
