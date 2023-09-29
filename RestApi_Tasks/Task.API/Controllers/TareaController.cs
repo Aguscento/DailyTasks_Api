@@ -3,6 +3,8 @@ using Task.BLL.Interfaces;
 using Task.DTO;
 using Task.DAL;
 using Task.Models;
+using Microsoft.EntityFrameworkCore;
+using Task.DAL.Interfaces;
 
 namespace Task.API.Controllers
 {
@@ -10,22 +12,17 @@ namespace Task.API.Controllers
     [ApiController]
     public class TareaController : ControllerBase
     {
-        private readonly DbtaskContext _btaskContext;
+        private readonly IServiceTarea _serviceTarea;
 
-        public TareaController(DbtaskContext btaskContext)
+        public TareaController(IServiceTarea serviceTarea)
         {
-            _btaskContext = btaskContext;
+            _serviceTarea = serviceTarea;
         }
 
-        //private readonly IServiceTarea _serviceTarea;
-        //public TareaController(IServiceTarea serviceTarea)
-        //{
-        //    _serviceTarea = serviceTarea;
-        //}
         [HttpGet]
-        public List<Tarea> GetTareaName()
+        public async Task<IQueryable<Tarea>> GetTareas()
         {
-            List<Tarea> listaTareas = _btaskContext.Tareas.ToList();
+            var listaTareas = await _serviceTarea.GetAll();
             return listaTareas;
         }
     }

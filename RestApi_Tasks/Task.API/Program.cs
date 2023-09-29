@@ -1,4 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Task.BLL;
+using Task.BLL.Interfaces;
+using Task.DAL;
+using Task.DAL.Interfaces;
 using Task.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +18,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DbtaskContext>(option => { 
     option.UseSqlServer(builder.Configuration.GetConnectionString("SQLString"));
 });
+
+builder.Services.AddScoped<IRepository<Tarea>, RepositoryTarea>();
+builder.Services.AddScoped<IServiceTarea, ServiceTarea>();
 
 // automapper config
 builder.Services.AddAutoMapper(typeof(Program));

@@ -24,11 +24,10 @@ namespace Task.BLL
             _mapper = mapper;
         }
 
-        public async Task<List<TareaDTO>> GetAll()
+        public async Task<IQueryable<Tarea>> GetAll()
         {
-                List<Tarea> listaTareas = (List<Tarea>)await _repository.Query();
-                return _mapper.Map<List<TareaDTO>>(listaTareas);
-
+            var listaTareas = await _repository.Query();
+            return listaTareas;
         }
     }
 }
