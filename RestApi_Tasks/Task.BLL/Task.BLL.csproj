@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Task.DLL\Task.DAL.csproj" />
+    <ProjectReference Include="..\Task.DTO\Task.DTO.csproj" />
+    <ProjectReference Include="..\TASK.Models\Task.Models.csproj" />
+  </ItemGroup>
+
 </Project>

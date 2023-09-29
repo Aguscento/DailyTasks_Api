@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Task.BLL\Task.BLL.csproj" />
     <ProjectReference Include="..\Task.DLL\Task.DAL.csproj" />
   </ItemGroup>
 
